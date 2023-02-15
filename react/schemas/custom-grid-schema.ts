@@ -2,7 +2,7 @@ const customGridSchema = {
   title: "Grilla custom",
   type: "object",
   properties: {
-    gridTypes: {
+    gridType: {
       title: "Tipo de Grilla",
       type: "number",
       enum: [

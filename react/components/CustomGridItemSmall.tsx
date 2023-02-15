@@ -6,11 +6,13 @@ type Props = {
   elementTwo: ReactNode
 }
 
-const CustomGridItemSmall  = ({ elementOne,  elementTwo}: Props) => {
-  return <div className={styles["grid__itemSmall"]}> 
-    {elementOne}
-    {elementTwo}
-  </div>
+const CustomGridItemSmall  = ({ elementOne,  elementTwo }: Props) => {
+  return (
+    <div className={styles["grid__itemSmall"]}>
+      {elementOne}
+      {elementTwo}
+    </div>
+  )
 }
 
 export default CustomGridItemSmall

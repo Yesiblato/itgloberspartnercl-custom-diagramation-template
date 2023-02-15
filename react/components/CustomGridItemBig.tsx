@@ -6,9 +6,11 @@ type Props = {
 }
 
 const CustomGridItemBig  = ({element}: Props) => {
-  return <div className={styles.grid__itemBig}>
+  return (
+  <div className={styles.grid__itemBig}>
     {element}
   </div>
+  )
 }
 
 export default CustomGridItemBig

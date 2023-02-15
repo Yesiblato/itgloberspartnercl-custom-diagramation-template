@@ -46,12 +46,12 @@
   margin: 10px;
   width: calc(50% - 20px);
   height: 500px;
-  background-color: gray;
+  /* background-color: gray; */
 }
 
 .grid__itemSmall {
   margin: 10px;
   width: calc(25% - 20px);
-  background-color: #c0baba;
+  /* background-color: #c0baba; */
   height: 500px;
 }
