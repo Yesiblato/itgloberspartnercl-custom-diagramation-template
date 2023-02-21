@@ -1,39 +1,39 @@
 # CUSTOM DIAGRAMATION TEMPLATE COMPONENT.
 
-Este es un componente personalizado que crea una grilla dinámina que recibe elementos hijos y permite cambiar el orden desde el site editor.
+This is a custom component that creates a dynamic grid that receives child elements and allows you to change the order from the site editor.
 
-En este componente se trabajó con las siguientes tecnologías:
+In this component we worked with the following technologies:
 
 - Vtex.
 - React.
 - Typescript.
 - Css.
 
-## Imágenes que muestran la dinámica del componente.
+## Images showing the dynamics of the component.
 
-- Posición grilla 1.
+- Position grid 1.
 
 ![grilla 1](https://user-images.githubusercontent.com/87024446/219827802-387920cb-f604-4c86-a849-625f2559d558.png)
 
-- Posición grilla 2.
+- Position grid 2.
 
 ![grilla 2](https://user-images.githubusercontent.com/87024446/219827811-2d6f1a07-0ab9-4754-9202-26814500acad.png)
 
-- Posición grilla 3.
+- Position grid 3.
 
 ![grilla 4](https://user-images.githubusercontent.com/87024446/219827886-3311357f-c839-4deb-b54e-6b5ef627ecd6.png)
 
 ## Configuration 
 
-### Paso 1 - Clonar
+### Step 1 - Clone.
 
 Realizar la clonación del siguiente repositorio:
 - [Repositorio](https://github.com/Yesiblato/itgloberspartnercl-custom-diagramation-template)
 
-### Paso 2 - Editar el Manifest.json 
+### step 2 - Edit the Manifest.json 
 
-Ingresar al archivo manifest.json y realizar las siguentes modificaciones en: `vendor`, `name`, `version`, `title` y `description`
-como se muestra en el siguiente ejemplo: 
+Enter the manifest.json file and make the following changes to: `vendor`, `name`, `version`, `title` and `description`
+as shown in the following example: 
 
 ```js
 {
@@ -44,7 +44,7 @@ como se muestra en el siguiente ejemplo:
   "description": "Grilla interactiva que cambiará un orden y recibirá componentes hijos",
 }
 ```
-Además, verifique que el archivo cuente con los siguientes builders: 
+Also, check that the file has the following builders and the dependencies:
 
 ```js
   "builders": {
@@ -54,32 +54,59 @@ Además, verifique que el archivo cuente con los siguientes builders:
     "store": "0.x"
   }
 ```
-### Paso 3 - Instalar node-modules
 
-Para realizar esta instalación de node-modules, debe estar ubicado en la carpeta de `react` de la aplicación y ejecutar el comando `yarn`, y tendrá instaladas todas las dependencias necesarias para usar esta plantilla.
+## Dependencies
 
-### Paso 4 - Ejecutar el preview
+1. "vtex.css-handles": "0.x"
+### Step 3 - Install node-modules.
 
-Despues de realizar los pasos anteriores puede verificar si su componente está funcionando ejecutando el comando `vtex link` si todo funciona correctamente deberá ver en consola `Sending locale change event`.
+To carry out this installation of Node-Modules, it must be located in the `react` folder of the application and execute the `yarn` command, and will have all the necessary units to use this template installed.
 
-Si la consola muestra algún error, por favor verificar los pasos anteriores y vuelva a ejecutar `vtex link`.
+### Step 4 - Execute the preview.
 
-### Paso 5 - Implementar el componente
+After performing the previous steps you can verify if its component is running by running the `Vtex Link` command if everything works correctly should see in` Sending locale change event`.
 
-Por último, para utilizar el componente debe agregarlo a las `dependencies` en el `manifest.json` de su tienda (store-theme) de la siguiente manera:
+If the console shows any error, please verify the previous steps and re -execute `vtex link`.
+
+### Step 5 - Deploy the component
+
+Finally, to use the component you must add it to the `dependencies` in the `manifest.json` of your store (store-theme) as follows:
 
 - vendor.name : version. 
 
-Por ejemplo: 
+For example:
 ```js
   "dependencies": {
      "itgloberspartnercl.special-diagramation": "0.x"
   }
 ```
+## Customization
 
-## Dependencies
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on 
 
-1. "vtex.css-handles": "0.x"
+| CSS Handles |
+| ----------- | 
+| `grid__1` | 
+| `grid__2` | 
+| `grid__3` | 
+| `grid__4` | 
+| `grid__itemBig` |
+| `grid__itemSmall` |
+
+
+### We call the component in a flex layout to be able to visualize it in our store theme.
+
+```js
+  "flex-layout.col#container__samSmith": {
+    "title": "container__samSmith--col",
+    "children": [
+      "flex-layout.col#title",
+      "custom-grid",
+      "quick-order"
+    ]
+  }
+
+```
 
 ## Contributors ✨
 
